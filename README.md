@@ -15,7 +15,7 @@ yarn add cypress --dev
 ```
 macOS 10.9 and above (Intel or Apple Silicon 64-bit (x64 or arm64))
 
-Linux Ubuntu 12.04 and above, Fedora 21 and Debian 8 (x86_64 or Arm 64-bit (x64 or arm64)) (see Linux Prerequisites down below)
+Linux Ubuntu 12.04 and above, Fedora 21 and Debian 8 
 
 Windows 7 and above (64-bit only)
 ```
