@@ -42,3 +42,7 @@ yarn run cypress open
   }
 }
 ```
+### Check Cypress Version
+```
+npx cypress --version
+```
