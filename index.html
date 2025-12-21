@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahoteshanul Haque Shah - Technical Project Manager</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👨‍💼</text></svg>">
+    <style>
+        /* ========================================
+           GLOBAL RESET & BASE STYLES
+           ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e5e7eb; /* Light gray text for dark mode */
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%); /* Dark gradient */
+            padding: 20px;
+            scroll-behavior: smooth;
+        }
+
+        /* ========================================
+           MAIN CONTAINER
+           ======================================== */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #111111; /* Very dark background */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+        }
+
+        /* ========================================
+           NAVIGATION MENU
+           ======================================== */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(17, 17, 17, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #2d2d2d;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 15px 20px;
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 0.95em;
+            font-weight: 500;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        nav a.active {
+            color: #ffffff;
+            border-bottom-color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* ========================================
+           HEADER SECTION
+           ======================================== */
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); /* Dark header */
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        header h2 {
+            font-size: 1.4em;
+            font-weight: 300;
+            margin-bottom: 25px;
+            color: #d1d5db;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95em;
+            color: #d1d5db;
+        }
+
+        .contact-info a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #9ca3af;
+        }
+
+        /* Social icon styling */
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .social-icon img {
+            width: 20px;
+            height: 20px;
+            filter: brightness(0) invert(1);
+        }
+
+        /* ========================================
+           MAIN CONTENT AREA
+           ======================================== */
+        .content {
+            padding: 40px;
+        }
+
+        /* Card styling for all sections - DARK MODE */
+        .section-card {
+            background: #1a1a1a; /* Dark card background */
+            padding: 35px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+            border: 1px solid #2d2d2d;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+            border-color: #3d3d3d;
+        }
+
+        /* Section headings */
+        h3 {
+            color: #ffffff;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #2d2d2d;
+            position: relative;
+            font-weight: 600;
+        }
+
+        h3::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: #ffffff;
+        }
+
+        /* ========================================
+           CAREER OBJECTIVE SECTION
+           ======================================== */
+        .objective {
+            background: #242424; /* Slightly lighter dark */
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #ffffff;
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #d1d5db;
+        }
+
+        /* ========================================
+           EXPERIENCE & EDUCATION SECTIONS
+           ======================================== */
+        .experience-item,
+        .education-item {
+            margin-bottom: 25px;
+            padding: 25px;
+            background: #242424; /* Dark item background */
+            border-radius: 10px;
+            transition: all 0.3s;
+            border: 1px solid #2d2d2d;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .experience-item:last-child,
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-item:hover,
+        .education-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+            border-color: #3d3d3d;
+        }
+
+        /* Organization logo styling */
+        .org-logo {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            border-radius: 8px;
+            background: #2d2d2d; /* Dark logo background */
+            border: 1px solid #3d3d3d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .org-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 5px;
+        }
+
+        /* Placeholder icon for logo */
+        .org-logo::before {
+            /* content: '🏢'; */
+            font-size: 30px;
+        }
+
+        /* Content wrapper for experience/education items */
+        .item-content {
+            flex: 1;
+        }
+
+        .job-title {
+            font-size: 1.3em;
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .company {
+            font-size: 1.1em;
+            color: #d1d5db;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .date-location {
+            color: #9ca3af;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-item li {
+            padding-left: 25px;
+            margin-bottom: 10px;
+            position: relative;
+            line-height: 1.6;
+            color: #d1d5db;
+        }
+
+        .experience-item li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* ========================================
+           PROJECTS SECTION
+           ======================================== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .project-item {
+            background: linear-gradient(135deg, #242424 0%, #1a1a1a 100%);
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 500;
+            border: 1px solid #2d2d2d;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, #2d2d2d 0%, #242424 100%);
+            border-color: #3d3d3d;
+        }
+
+        /* ========================================
+           CERTIFICATION SECTION
+           ======================================== */
+        .certification-wrapper {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .certification {
+            background: linear-gradient(135deg, #242424 0%, #1a1a1a 100%);
+            color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            font-size: 1.05em;
+            border: 1px solid #2d2d2d;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            flex: 1;
+        }
+
+        .certification strong {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        /* ========================================
+           CAL.COM IFRAME SECTION
+           ======================================== */
+        .calendar-container {
+            width: 100%;
+            height: 700px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #242424;
+            border: 1px solid #2d2d2d;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .calendar-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ========================================
+           FOOTER SECTION
+           ======================================== */
+        footer {
+            background: #0f0f0f;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9em;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ========================================
+           RESPONSIVE DESIGN - TABLET
+           ======================================== */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            nav a {
+                padding: 12px 10px;
+                font-size: 0.85em;
+            }
+
+            header {
+                padding: 30px 20px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header h2 {
+                font-size: 1.1em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .social-icon {
+                justify-content: center;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .section-card {
+                padding: 25px;
+            }
+
+            h3 {
+                font-size: 1.5em;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-item,
+            .education-item {
+                padding: 15px;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .certification-wrapper {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .org-logo {
+                margin-bottom: 10px;
+            }
+
+            .job-title {
+                font-size: 1.1em;
+            }
+
+            .company {
+                font-size: 1em;
+            }
+
+            .calendar-container {
+                height: 600px;
+            }
+        }
+
+        /* ========================================
+           RESPONSIVE DESIGN - MOBILE
+           ======================================== */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+                letter-spacing: 1px;
+            }
+
+            header h2 {
+                font-size: 1em;
+            }
+
+            h3 {
+                font-size: 1.3em;
+            }
+
+            .section-card {
+                padding: 20px;
+            }
+
+            .org-logo {
+                width: 50px;
+                height: 50px;
+                min-width: 50px;
+            }
+
+            .calendar-container {
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- ====================================
+             NAVIGATION MENU
+             ==================================== -->
+        <nav>
+            <ul>
+                <li><a href="#objective">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certification">Certification</a></li>
+                <li><a href="#meeting">Book Meeting</a></li>
+            </ul>
+        </nav>
+
+        <!-- ====================================
+             HEADER SECTION
+             ==================================== -->
+        <header>
+            <h1>AHOTESHANUL HAQUE SHAH</h1>
+            <h2>Technical Project Manager • Ideas → Outcomes 🤝🏻</h2>
+            <div class="contact-info">
+                <!-- Phone Number -->
+                <a href="tel:+8801783168815" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                    </svg>
+                    +8801783168815
+                </a>
+                
+                <!-- Email -->
+                <a href="mailto:ahoteshanul@gmail.com" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    ahoteshanul@gmail.com
+                </a>
+                
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/ahoteshanul" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+                
+                <!-- WhatsApp -->
+                <a href="https://wa.me/8801783168815" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    WhatsApp
+                </a>
+                
+                <!-- Facebook -->
+                <a href="https://facebook.com/ahoteshanul" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    Facebook
+                </a>
+            </div>
+        </header>
+
+        <div class="content">
+            
+            <!-- ====================================
+                 CAREER OBJECTIVE SECTION
+                 ==================================== -->
+            <div class="section-card" id="objective">
+                <h3>Career Objective</h3>
+                <div class="objective">
+                    Technical Project Manager with 4+ years of experience leading cross-functional teams to deliver complex software projects on time and within budget. Skilled in Agile methodologies, risk management, and stakeholder communication. Seeking to leverage my expertise to drive the success of cutting-edge projects.
+                </div>
+            </div>
+
+            <!-- ====================================
+                 PROFESSIONAL EXPERIENCE SECTION
+                 ==================================== -->
+            <div class="section-card" id="experience">
+                <h3>Professional Experience</h3>
+                
+                <div class="experience-item">
+                    <!-- Organization Logo -->
+                    <div class="org-logo">
+                        <img src="https://riseuplabs.com/wp-content/uploads/2021/03/riseup-labs-logo-specifics-black-300x258.png" alt="Riseup Labs">
+                    </div>
+                    <div class="item-content">
+                        <div class="job-title">Product Manager (Full-Time)</div>
+                        <div class="company">Riseup Labs</div>
+                        <div class="date-location">July 2025 – Continue | Uttara, Dhaka, Bangladesh</div>
+                        <ul>
+                            <li>Scrum Meetings - Facilitated daily stand-ups to monitor progress, address blockers, and ensure team alignment.</li>
+                            <li>Project Planning & Execution - Defined project scope, milestones, and deliverables; ensured timely execution.</li>
+                            <li>Agile Scrum Leadership - Led sprint planning, reviews, and retrospectives to drive iterative development.</li>
+                            <li>Team Collaboration - Coordinated with developers, QA engineers, designers, and stakeholders to align on goals.</li>
+                            <li>Client Communication - Managed stakeholder through regular updates, requirement gathering, & feedbacks.</li>
+                            <li>Quality Assurance - Oversaw QA processes to ensure high-quality deliverables & adherence to acceptance criteria.</li>
+                            <li>Risk Management & Issue Resolution - Identified potential risks early and implemented mitigation strategies.</li>
+                            <li>Project Tracking - Utilized tools like ClickUp to monitor timelines, manage tasks, and report on progress.</li>
+                            <li>Documentation & Reporting - Maintained up-to-date project documentation and created regular reports.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <!-- Organization Logo -->
+                    <div class="org-logo">
+                        <img src="https://content.easy.jobs/assets/18442/company_logo.png" alt="JoulesLabs">
+                        
+                    </div>
+                    <div class="item-content">
+                        <div class="job-title">Technical Project Manager (Full-Time) (Onsite)</div>
+                        <div class="company">JoulesLabs</div>
+                        <div class="date-location">February 2022 – June 2025 | Mirpur DOHS, Dhaka, Bangladesh</div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <!-- Organization Logo -->
+                    <div class="org-logo">
+                        
+                        <img src="https://media.glassdoor.com/sqll/3626177/quantanite-squarelogo-1605524157326.png" alt="Quantanite">
+                    </div>
+                    <div class="item-content">
+                        <div class="job-title">Analyst (Full-Time) (Remote)</div>
+                        <div class="company">Quantanite</div>
+                        <div class="date-location">January 2021 – December 2021 | Mirpur 14, Dhaka, Bangladesh</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====================================
+                 PROJECTS SECTION
+                 ==================================== -->
+            <div class="section-card" id="projects">
+                <h3>Projects I Worked On</h3>
+                <div class="projects-grid">
+                    <div class="project-item">National MRV System - Department of Environment</div>
+                    <div class="project-item">Custom Geographic Information System App</div>
+                    <div class="project-item">ReviewXpo Product Reviews App</div>
+                    <div class="project-item">BoostlyCart Cart Drawer Upsell</div>
+                    <div class="project-item">Zepto Sign Customizer</div>
+                    <div class="project-item">Soha Living - Custom Project Management Tool</div>
+                    <div class="project-item">PopMan: Popups & Social Proof</div>
+                    <div class="project-item">InfinSEO: SEO Image Optimizer</div>
+                    <div class="project-item">FundedNext - Trading Firm | NEXT Ventures</div>
+                </div>
+            </div>
+
+            <!-- ====================================
+                 EDUCATION SECTION
+                 ==================================== -->
+            <div class="section-card" id="education">
+                <h3>Education</h3>
+                
+                <div class="education-item">
+                    <!-- University Logo -->
+                    <div class="org-logo">
+                        <img src="https://erp.uttarauniversity.edu.bd/temp/assets/img/header_logo.png" alt="Uttara University">
+                    </div>
+                    <div class="item-content">
+                        <div class="job-title">Master of Science in Computer Science Engineering</div>
+                        <div class="company">Uttara University</div>
+                        <div class="date-location">January 2024 – February 2025 | Uttara, Dhaka, Bangladesh</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <!-- University Logo -->
+                    <div class="org-logo">
+                        <img src="https://sdg.bubt.edu.bd/assets/bubt-logo.png" alt="BUBT">
+                        <!-- Replace with actual logo: <img src="bubt-logo.png" alt="BUBT"> -->
+                    </div> 
+                    <div class="item-content">
+                        <div class="job-title">Bachelor of Science in Computer Science Engineering</div>
+                        <div class="company">Bangladesh University of Business & Technology (BUBT)</div>
+                        <div class="date-location">October 2017 – December 2021 | Mirpur, Dhaka, Bangladesh</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====================================
+                 CERTIFICATION SECTION
+                 ==================================== -->
+            <div class="section-card" id="certification">
+                <h3>Certification</h3>
+               
+
+                <div class="education-item">
+                    <div class="org-logo">
+                        <!-- Replace with actual logo: <img src="iba-du-logo.png" alt="IBA DU"> -->
+                         <img src="https://www.iba-du.edu/localhost/iba/upload_images/header_top/du-logo.png" alt="IBA DU">
+                    </div>
+                    <div class="item-content">
+                        <div class="job-title">Advanced Certificate for Management Professionals (ACMP) 4.0</div>
+                        <div class="company">  IBA, DU | September 2025</div>
+                    </div>
+                </div>
+              
+            </div>
+
+            <!-- ====================================
+                 BOOK A MEETING SECTION (CAL.COM)
+                 ==================================== -->
+            <div class="section-card" id="meeting">
+                <h3>Book a Meeting</h3>
+                <div class="calendar-container">
+                    <iframe src="https://cal.com/ahoteshanul" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ====================================
+             FOOTER SECTION
+             ==================================== -->
+        <footer>
+            <p>&copy; 2026 Ahoteshanul Haque Shah. All rights reserved.</p>
+        </footer>
+        
+    </div>
+
+    <script>
+        // Navigation active state based on scroll position
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section-card[id]');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            function updateActiveLink() {
+                let currentSection = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop - 150) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', updateActiveLink);
+            updateActiveLink(); // Call once on load
+        });
+    </script>
+</body>
+</html>
