@@ -1,9 +1,0 @@
-your-project/
-├── index.html (your HTML file)
-└── assets/
-    ├── riseup-labs.png
-    ├── jouleslabs.png
-    ├── quantanite.png
-    ├── uttara-university.png
-    ├── bubt.png
-    └── iba-du.png
